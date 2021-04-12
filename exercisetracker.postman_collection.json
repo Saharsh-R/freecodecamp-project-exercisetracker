@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "e040c52a-3b7d-473d-9e32-c41e1eb3bb2c",
+		"name": "exercisetracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basefull}}/users",
+					"host": [
+						"{{basefull}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "saharsh",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{basefull}}/new-user",
+					"host": [
+						"{{basefull}}"
+					],
+					"path": [
+						"new-user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "saharsh",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add log of a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userId",
+							"value": "60746bccfdc0281c20598973",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "1.1",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{basefull}}/add",
+					"host": [
+						"{{basefull}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get log of a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basefull}}/log?userId=60746bccfdc0281c20598973&to=2200-01-31",
+					"host": [
+						"{{basefull}}"
+					],
+					"path": [
+						"log"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "60746bccfdc0281c20598973"
+						},
+						{
+							"key": "from",
+							"value": "1999-02-05",
+							"disabled": true
+						},
+						{
+							"key": "to",
+							"value": "2200-01-31"
+						},
+						{
+							"key": "limit",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:3000"
+		},
+		{
+			"key": "base2",
+			"value": "api/exercise"
+		},
+		{
+			"key": "basefull",
+			"value": "http://localhost:3000/api/exercise"
+		}
+	]
+}
