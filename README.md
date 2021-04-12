@@ -6,3 +6,4 @@ The postman collection which I made while working for this project is also in th
 ![image](https://user-images.githubusercontent.com/48884865/114442669-6be8bf00-9bea-11eb-9e6f-587344909888.png)
 
 
+![image](https://user-images.githubusercontent.com/48884865/114443226-0ea13d80-9beb-11eb-9a3c-db8f409dadd1.png)
